@@ -7,6 +7,7 @@
     <title>Dojo Survey</title>
 </head>
 <body>
+    
     <form action="/process" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name"><br>
@@ -28,5 +29,12 @@
         <textarea name="comment" id="comment" cols="30" rows="5"></textarea><br>
         <button>Submit</button>
     </form>
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+    {% if messages %}                            <!-- check if there are any messages -->
+        {% for message in messages %}            <!-- loop through the messages -->
+            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
 </body>
 </html>

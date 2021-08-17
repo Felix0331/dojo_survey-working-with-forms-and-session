@@ -9,10 +9,10 @@
 <body>
     <u><h2>Submitted Info</h2></u>
     <div>
-        <p>Name: {{session['name']}}</p>
-        <p>Location: {{session['location']}}</p>
-        <p>Language: {{session['language']}}</p>
-        <p>Comment: {{session['comment']}}</p>
+        <p>Name: {{dojo[0].name}}</p>
+        <p>Location: {{dojo[0].location}}</p>
+        <p>Language: {{dojo[0].language}}</p>
+        <p>Comment: {{dojo[0].comment}}</p>
     </div>
     <form action="/">
         <button>Go Back</button>
